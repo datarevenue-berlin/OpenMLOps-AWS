@@ -5,7 +5,7 @@ MLOps architecture on an EKS cluster.
 
 ## Prerequisites
 
-To use this configuration, you must have [Terraform](https://www.terraform.io/downloads.html) installed at version 0.13 or newer.
+To use this configuration, you must have [Terraform](https://www.terraform.io/downloads.html) installed at version 0.14 or newer.
 
 You must also have an [AWS account](https://portal.aws.amazon.com/billing/signup#/start).
 
