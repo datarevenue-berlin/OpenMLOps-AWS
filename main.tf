@@ -1,4 +1,4 @@
-module "eks-mlops" {
+module "mlops-architecture-eks" {
   // TODO: Use the HTTPS source once we publish the repository.
 //  source = "github.com/datarevenue-berlin/mlops-architecture-eks-cluster.git"  // HTTPS
 //  source = "git@github.com:datarevenue-berlin/mlops-architecture-eks-cluster.git"  // SSH
@@ -20,9 +20,9 @@ module "mlops-architecture" {
   source = "/home/mdank/repos/mlops-architecture"  // local
 
   kubernetes = {
-    host                   = module.eks-mlops.cluster_endpoint
-    token                  = module.eks-mlops.cluster_auth_token
-    cluster_ca_certificate = base64decode(module.eks-mlops.cluster_certificate)
+    host                   = module.mlops-architecture-eks.cluster_endpoint
+    token                  = module.mlops-architecture-eks.cluster_auth_token
+    cluster_ca_certificate = base64decode(module.mlops-architecture-eks.cluster_certificate)
   }
 
   db_username = var.db_username
