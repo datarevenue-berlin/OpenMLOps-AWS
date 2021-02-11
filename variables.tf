@@ -1,3 +1,8 @@
+variable "aws_region" {
+  description = "AWS region"
+  default = "eu-west-1"
+}
+
 variable "cluster_name" {
   description = "The name of your EKS cluster"
 }

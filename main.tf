@@ -1,3 +1,12 @@
+provider "aws" {
+  region = var.aws_region
+}
+
+
+resource "aws_s3_bucket" "mlflow_artifact_root" {
+  bucket = var.bucket_name
+}
+
 module "mlops-architecture-eks" {
   // TODO: Use the HTTPS source once we publish the repository.
 //  source = "github.com/datarevenue-berlin/mlops-architecture-eks-cluster.git"  // HTTPS
@@ -8,8 +17,19 @@ module "mlops-architecture-eks" {
   map_users = []
 }
 
-resource "aws_s3_bucket" "mlflow_artifact_root" {
-  bucket = var.bucket_name
+
+provider "helm" {
+  kubernetes {
+    host                   = module.mlops-architecture-eks.cluster_endpoint
+    token                  = module.mlops-architecture-eks.cluster_auth_token
+    cluster_ca_certificate = base64decode(module.mlops-architecture-eks.cluster_certificate)
+  }
+}
+
+provider "kubernetes" {
+  host                   = module.mlops-architecture-eks.cluster_endpoint
+  token                  = module.mlops-architecture-eks.cluster_auth_token
+  cluster_ca_certificate = base64decode(module.mlops-architecture-eks.cluster_certificate)
 }
 
 
@@ -18,12 +38,6 @@ module "mlops-architecture" {
 //  source = "github.com/datarevenue-berlin/mlops-architecture.git"  // HTTPS
 //  source = "git@github.com:datarevenue-berlin/mlops-architecture.git"  // SSH
   source = "/home/mdank/repos/mlops-architecture"  // local
-
-  kubernetes = {
-    host                   = module.mlops-architecture-eks.cluster_endpoint
-    token                  = module.mlops-architecture-eks.cluster_auth_token
-    cluster_ca_certificate = base64decode(module.mlops-architecture-eks.cluster_certificate)
-  }
 
   db_username = var.db_username
   db_password = var.db_password
