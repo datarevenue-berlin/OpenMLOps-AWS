@@ -14,7 +14,6 @@ module "mlops-architecture-eks" {
   source = "/home/mdank/repos/mlops-architecture-eks-cluster"  // local
 
   cluster_name = var.cluster_name
-  map_users = []
 }
 
 
@@ -42,4 +41,6 @@ module "mlops-architecture" {
   db_username = var.db_username
   db_password = var.db_password
   mlflow_artifact_root = "s3://${aws_s3_bucket.mlflow_artifact_root.bucket}"
+
+  jhub_proxy_secret_token = "8d1518d037a53d84d42fc3a8074f80b0cd62259d6eee0a619b8638f65e3d19d5"
 }
