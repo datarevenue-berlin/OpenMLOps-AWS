@@ -1,7 +1,7 @@
-# Data Revenue - MLOps Reference Architecture deployed on AWS
+# MLOps Reference Architecture deployed on AWS
 
 This repository contains Terraform configuration which serves as an example of how to deploy
-MLOps architecture on an EKS cluster. 
+[MLOps architecture][mlops-repo] on an EKS cluster. 
 
 ## Prerequisites
 
@@ -19,23 +19,34 @@ ATTENTION: Applying this configuration will result in AWS billing you for the pr
 1. Run `terraform apply -var-file my_vars.tfvars`. Review the plan that Terraform produces.
 1. If you are okay with the plan, answer `yes`. Terraform will provision the cluster and install MLOps tools in it.
 
+## Accessing the tools
+
+The tools are configured in the most basic way. For details on how to change the configuration, please refer 
+to the [MLOps reference architecture][mlops-repo] documentation.
+
+### Jupyterhub
+
+The default password is `a-shared-secret-password`.
+
 ## Provisioned resources
 
-This configuration will provision:
-- a VPC to isolate the cluster resources
-- an EKS cluster with one node group
-- security groups needed for the tools to communicate with each other and with the outside world
-- a policy to allow the worker nodes access to S3 storage and ECR registry
-- an S3 bucket as a storage backend
+Please refer to [this repository](https://github.com/datarevenue-berlin/mlops-architecture-eks-cluster)'s Readme
+to learn what resources will be provisioned.
+
+An S3 bucket will be provisioned as a storage backend.
 
 MLOps tools will be installed in the cluster.
 
 ## Structure
 
 Two Terraform modules are used:
-- [`mlops-architecture-eks-cluster`](https://github.com/datarevenue-berlin/mlops-architecture-eks-cluster) 
+- [`mlops-architecture-eks-cluster`][mlops-eks-repo] 
   to provision a Kubernetes cluster using EKS service of AWS,
-- [`mlops-architecture`](https://github.com/datarevenue-berlin/mlops-architecture) 
+- [`mlops-architecture`][mlops-repo] 
   to install MLOps tools in the cluster.
   
 Please refer to the documentation of the modules for the details. 
+
+
+[mlops-repo]: https://github.com/datarevenue-berlin/mlops-architecture
+[mlops-eks-repo]: https://github.com/datarevenue-berlin/mlops-architecture-eks-cluster
