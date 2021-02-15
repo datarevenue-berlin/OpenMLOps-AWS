@@ -42,5 +42,6 @@ module "mlops-architecture" {
   db_password = var.db_password
   mlflow_artifact_root = "s3://${aws_s3_bucket.mlflow_artifact_root.bucket}"
 
-  jhub_proxy_secret_token = "8d1518d037a53d84d42fc3a8074f80b0cd62259d6eee0a619b8638f65e3d19d5"
+  // Check the documentation to learn how to generate a token. E.g.: `openssl rand -hex 32`
+  jhub_proxy_secret_token = "IfYouDecideToUseJhubProxyYouShouldChangeThisValueToARandomString"
 }
