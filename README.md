@@ -3,6 +3,10 @@
 This repository contains Terraform configuration which serves as an example of how to deploy
 [MLOps architecture][mlops-repo] on an EKS cluster. 
 
+## Other repositories
+
+![Repositories diagram](http://www.plantuml.com/plantuml/svg/fP91Qp8n48Rl-HKlNhvJtBjy5ANqK6nfmK8FuY4cenlCJfRCn1vA_tkn8aZPMehNmCpxpFDcAkgArYuPdvm8HeyFJxrWLdmRbRpMGiYCsUjYX7S3F9UyZn8p2nnygg9Ku3WWigXBIN1Se3ad6HjWkMnLUvaqpJPgMzTZdxicE7M5ziILx9fAYjnqAVTYtLckpMpTco15tc6rCX-6in8IRTIyj55GgC-6EE3mRdu-u4X-Fm28o72OrpKL9YKvNNGT-1dn1QjtymLkZt7VrGuoeKhaxTUOKDb7JyYRGp5NMgQTs5F46RYvz1F-Mpie-Wz3moBCFytmcRNa16q9kGGg4pFOgbssCGJYrStlUqqR0y77uXEPAN6eNVe4)
+
 ## Prerequisites
 
 To use this configuration, you must have [Terraform](https://www.terraform.io/downloads.html) installed at version 0.14 or newer.
