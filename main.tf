@@ -11,7 +11,7 @@ module "mlops-architecture-eks" {
   // TODO: Use the HTTPS source once we publish the repository.
 //  source = "github.com/datarevenue-berlin/mlops-architecture-eks-cluster.git"  // HTTPS
 //  source = "git@github.com:datarevenue-berlin/mlops-architecture-eks-cluster.git"  // SSH
-  source = "/home/mdank/repos/mlops-architecture-eks-cluster"  // local
+  source = "../mlops-architecture-eks-cluster"  // local
 
   cluster_name = var.cluster_name
 }
@@ -36,7 +36,7 @@ module "mlops-architecture" {
   // TODO: Use the HTTPS source once we publish the repository.
 //  source = "github.com/datarevenue-berlin/mlops-architecture.git"  // HTTPS
 //  source = "git@github.com:datarevenue-berlin/mlops-architecture.git"  // SSH
-  source = "/home/mdank/repos/mlops-architecture"  // local
+  source = "../mlops-architecture"  // local
 
   db_username = var.db_username
   db_password = var.db_password
