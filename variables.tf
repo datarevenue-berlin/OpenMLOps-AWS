@@ -19,3 +19,13 @@ variable "db_password" {
   description = "Database password"
   sensitive   = true
 }
+
+variable "additional_aws_users" {
+  description = "Additional AWS users that will have access to the cluster (e.g. your coworkers)."
+  type = list(object({
+    userarn  = string
+    username = string
+    groups   = list(string)  // e.g. ["system:masters"]
+  }))
+  default = []
+}
