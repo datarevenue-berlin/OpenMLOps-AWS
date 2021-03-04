@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "eks-mlops-tf-state"
+    key = "terraform-dev.tfstate"
+    region = "eu-west-1"
+  }
+}
+
 provider "aws" {
   region = var.aws_region
 }
@@ -48,4 +56,10 @@ module "mlops-architecture" {
 
   // Check the documentation to learn how to generate a token. E.g.: `openssl rand -hex 32`
   jhub_proxy_secret_token = "IfYouDecideToUseJhubProxyYouShouldChangeThisValueToARandomString"
+
+  protocol = var.protocol
+  hostname = var.hostname
+  oauth2_providers = var.oauth2_providers
+  ory_kratos_cookie-secret = var.ory_kratos_cookie_secret
+  ory_kratos_db_password = var.ory_kratos_db_password
 }
