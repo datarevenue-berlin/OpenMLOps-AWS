@@ -14,6 +14,7 @@ module "mlops-architecture-eks" {
   source = "../mlops-architecture-eks-cluster"  // local
 
   cluster_name = var.cluster_name
+  map_users = var.additional_aws_users
 }
 
 
