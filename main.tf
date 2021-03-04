@@ -38,6 +38,9 @@ module "mlops-architecture" {
 //  source = "git@github.com:datarevenue-berlin/mlops-architecture.git"  // SSH
   source = "../mlops-architecture"  // local
 
+  // Necessary for the correct order of destruction.
+  depends_on = [module.mlops-architecture-eks]
+
   db_username = var.db_username
   db_password = var.db_password
   mlflow_artifact_root = "s3://${aws_s3_bucket.mlflow_artifact_root.bucket}"
