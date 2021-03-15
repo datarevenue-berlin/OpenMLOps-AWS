@@ -66,3 +66,10 @@ variable "hostname" {
 variable "protocol" {
   default = "https"
 }
+
+variable "install_feast" {
+  type = bool
+}
+
+variable "tls_certificate_arn" {
+}
