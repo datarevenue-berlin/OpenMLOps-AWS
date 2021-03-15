@@ -1,11 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket = "eks-mlops-tf-state"
-    key = "terraform-dev.tfstate"
-    region = "eu-west-1"
-  }
-}
-
 provider "aws" {
   region = var.aws_region
 }
