@@ -45,7 +45,21 @@ module "mlops-architecture" {
   db_username = var.db_username
   db_password = var.db_password
   mlflow_artifact_root = "s3://${aws_s3_bucket.mlflow_artifact_root.bucket}"
+  mlflow_service_type = "ClusterIP"
 
+  prefect_service_type = "ClusterIP"
   // Check the documentation to learn how to generate a token. E.g.: `openssl rand -hex 32`
   jhub_proxy_secret_token = "IfYouDecideToUseJhubProxyYouShouldChangeThisValueToARandomString"
+  jhub_proxy_service_type = "ClusterIP"
+
+  protocol = var.protocol
+  hostname = var.hostname
+  oauth2_providers = var.oauth2_providers
+  ory_kratos_cookie_secret = var.ory_kratos_cookie_secret
+  ory_kratos_db_password = var.ory_kratos_db_password
+
+  install_feast = var.install_feast
+
+  aws = true
+  tls_certificate_arn = var.tls_certificate_arn
 }
