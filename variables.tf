@@ -31,7 +31,11 @@ variable "additional_aws_users" {
 }
 
 variable "ory_kratos_db_password"{
-  description = "PostgreSQL Database Password"
+  description = "PostgreSQL Database Password for Kratos"
+}
+
+variable "ory_keto_db_password"{
+  description = "PostgreSQL Database Password for Keto"
 }
 
 variable "ory_kratos_cookie_secret" {

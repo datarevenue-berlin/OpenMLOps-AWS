@@ -57,6 +57,7 @@ module "mlops-architecture" {
   oauth2_providers = var.oauth2_providers
   ory_kratos_cookie_secret = var.ory_kratos_cookie_secret
   ory_kratos_db_password = var.ory_kratos_db_password
+  ory_keto_db_password = var.ory_keto_db_password
 
   install_feast = var.install_feast
 
