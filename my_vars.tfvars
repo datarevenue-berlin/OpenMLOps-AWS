@@ -8,7 +8,7 @@ ory_kratos_db_password = "<use a long random string>"
 
 cluster_name = "eks-mlops"
 bucket_name = "<use something unique but meaningful>"
-hostname = "<use the domain you registered, e.g. example.com"
+hostname = "<use the domain you registered, e.g. example.com>"
 protocol = "https"
 
 install_feast = true
