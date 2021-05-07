@@ -20,6 +20,7 @@ module "mlops-architecture-eks" {
 
   cluster_name = var.cluster_name
   map_users = var.additional_aws_users
+  aws_region = var.aws_region
 }
 
 
