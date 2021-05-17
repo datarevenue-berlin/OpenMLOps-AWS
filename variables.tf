@@ -73,3 +73,7 @@ variable "install_feast" {
 
 variable "tls_certificate_arn" {
 }
+
+variable "enable_ory_authentication" {
+  default = true
+}
