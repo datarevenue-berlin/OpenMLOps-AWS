@@ -68,4 +68,6 @@ module "mlops-architecture" {
 
   aws = true
   tls_certificate_arn = var.tls_certificate_arn
+
+  enable_ory_authentication = var.enable_ory_authentication
 }
