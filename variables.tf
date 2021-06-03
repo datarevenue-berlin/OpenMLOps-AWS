@@ -73,3 +73,7 @@ variable "install_feast" {
 
 variable "tls_certificate_arn" {
 }
+
+variable "show_auth_ui" {
+  type = bool
+}

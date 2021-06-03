@@ -67,5 +67,6 @@ module "mlops-architecture" {
   install_feast = var.install_feast
 
   aws = true
+  show_auth_ui = var.show_auth_ui
   tls_certificate_arn = var.tls_certificate_arn
 }
