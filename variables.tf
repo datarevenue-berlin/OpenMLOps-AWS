@@ -74,6 +74,7 @@ variable "install_feast" {
 variable "tls_certificate_arn" {
 }
 
-variable "show_auth_ui" {
+variable "enable_registration" {
+  description = "Bool to set if registration page will or not be visible to users"
   type = bool
 }
