@@ -29,3 +29,5 @@ oauth2_providers = [
       tenant = ""
     }
 ]
+
+enable_registration = true
