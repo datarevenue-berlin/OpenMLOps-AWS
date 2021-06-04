@@ -41,8 +41,8 @@ provider "kubernetes" {
 
 module "mlops-architecture" {
   // TODO: Use the HTTPS source once we publish the repository.
-//  source = "github.com/datarevenue-berlin/mlops-architecture.git"  // HTTPS
-//  source = "git@github.com:datarevenue-berlin/mlops-architecture.git"  // SSH
+  //  source = "github.com/datarevenue-berlin/mlops-architecture.git"  // HTTPS
+  //  source = "git@github.com:datarevenue-berlin/mlops-architecture.git"  // SSH
   source = "../mlops-architecture"  // local
 
   // Necessary for the correct order of destruction.
