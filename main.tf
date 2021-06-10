@@ -1,3 +1,8 @@
+terraform {
+  backend "s3" {
+  }
+}
+
 provider "aws" {
   region = var.aws_region
 }
@@ -36,8 +41,8 @@ provider "kubernetes" {
 
 module "mlops-architecture" {
   // TODO: Use the HTTPS source once we publish the repository.
-//  source = "github.com/datarevenue-berlin/mlops-architecture.git"  // HTTPS
-//  source = "git@github.com:datarevenue-berlin/mlops-architecture.git"  // SSH
+  //  source = "github.com/datarevenue-berlin/mlops-architecture.git"  // HTTPS
+  //  source = "git@github.com:datarevenue-berlin/mlops-architecture.git"  // SSH
   source = "../mlops-architecture"  // local
 
   // Necessary for the correct order of destruction.
@@ -63,5 +68,6 @@ module "mlops-architecture" {
   install_feast = var.install_feast
 
   aws = true
+  enable_registration = var.enable_registration
   tls_certificate_arn = var.tls_certificate_arn
 }

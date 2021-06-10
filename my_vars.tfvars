@@ -1,4 +1,5 @@
 tls_certificate_arn = "<copy arn from AWS certificate manager>"
+aws_region = "eu-west-2"
 
 db_username = "eks-mlops"
 db_password = "<use a long random string>"
@@ -10,7 +11,7 @@ ory_kratos_db_password = "<use a long random string>"
 
 cluster_name = "eks-mlops"
 bucket_name = "<use something unique but meaningful>"
-hostname = "<use the domain you registered, e.g. example.com>"
+hostname = "<use the subdomain you registered, e.g. mlops.example.com>"
 protocol = "https"
 
 install_feast = true
@@ -31,3 +32,5 @@ oauth2_providers = [
       tenant = ""
     }
 ]
+
+enable_registration = true
