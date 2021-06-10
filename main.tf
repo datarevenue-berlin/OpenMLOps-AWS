@@ -55,6 +55,7 @@ module "mlops-architecture" {
 
   prefect_service_type = "ClusterIP"
   // Check the documentation to learn how to generate a token. E.g.: `openssl rand -hex 32`
+  jupyter_dummy_password = var.jupyter_dummy_password
   jhub_proxy_secret_token = "IfYouDecideToUseJhubProxyYouShouldChangeThisValueToARandomString"
   jhub_proxy_service_type = "ClusterIP"
 

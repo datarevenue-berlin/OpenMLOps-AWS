@@ -30,6 +30,9 @@ variable "additional_aws_users" {
   default = []
 }
 
+variable "jupyter_dummy_password"{
+  description = "Jupyter Hub Password"
+}
 variable "ory_kratos_db_password"{
   description = "PostgreSQL Database Password"
 }
