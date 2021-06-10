@@ -16,7 +16,7 @@ module "mlops-architecture-eks" {
   // TODO: Use the HTTPS source once we publish the repository.
 //  source = "github.com/datarevenue-berlin/mlops-architecture-eks-cluster.git"  // HTTPS
 //  source = "git@github.com:datarevenue-berlin/mlops-architecture-eks-cluster.git"  // SSH
-  source = "../mlops-architecture-eks-cluster"  // local
+  source = "../OpenMLOps-EKS-cluster"  // local
 
   cluster_name = var.cluster_name
   map_users = var.additional_aws_users
@@ -43,7 +43,7 @@ module "mlops-architecture" {
   // TODO: Use the HTTPS source once we publish the repository.
   //  source = "github.com/datarevenue-berlin/mlops-architecture.git"  // HTTPS
   //  source = "git@github.com:datarevenue-berlin/mlops-architecture.git"  // SSH
-  source = "../mlops-architecture"  // local
+  source = "../OpenMLOps"  // local
 
   // Necessary for the correct order of destruction.
   depends_on = [module.mlops-architecture-eks]
