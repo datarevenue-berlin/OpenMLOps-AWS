@@ -34,7 +34,7 @@ variable "jupyter_dummy_password"{
   description = "Jupyter Hub Password"
 }
 variable "ory_kratos_db_password"{
-  description = "Keto PostgreSQL Database Password"
+  description = "Kratos PostgreSQL Database Password"
 }
 variable "ory_keto_db_password"{
   description = "Keto PostgreSQL Database Password"
