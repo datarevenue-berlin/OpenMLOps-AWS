@@ -34,9 +34,11 @@ variable "jupyter_dummy_password"{
   description = "Jupyter Hub Password"
 }
 variable "ory_kratos_db_password"{
-  description = "PostgreSQL Database Password"
+  description = "Keto PostgreSQL Database Password"
 }
-
+variable "ory_keto_db_password"{
+  description = "Keto PostgreSQL Database Password"
+}
 variable "ory_kratos_cookie_secret" {
   description = "Session Cookie Generation secret"
   sensitive = true
@@ -77,8 +79,14 @@ variable "install_feast" {
 variable "tls_certificate_arn" {
 }
 
-variable "enable_registration" {
+variable "enable_registration_page" {
   description = "Bool to set if registration page will or not be visible to users"
   type = bool
   default = true
+}
+
+variable "install_ory_keto" {
+  description = "Whether to install or not Keto for User Authorization"
+  default = false
+  type = bool
 }
