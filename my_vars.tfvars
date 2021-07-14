@@ -14,8 +14,6 @@ bucket_name = "<use something unique but meaningful>"
 hostname = "<use the subdomain you registered, e.g. mlops.example.com>"
 protocol = "https"
 
-install_feast = true
-
 additional_aws_users = [
   {
     userarn = "<copy the ARN from AWS IAM>"
