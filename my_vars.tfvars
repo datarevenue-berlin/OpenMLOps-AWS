@@ -33,4 +33,4 @@ oauth2_providers = [
     }
 ]
 
-enable_registration = true
+enable_registration_page = true
