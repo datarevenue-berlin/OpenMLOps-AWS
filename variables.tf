@@ -92,13 +92,11 @@ variable "install_ory_keto" {
 }
 
 variable "eks_worker_groups" {
-  description = <<-EOF
-    Definition of AWS worker groups to be utilized.
+  description = "Definition of AWS worker groups to be utilized."
   type = list(object({
     name = string
     instance_type = string
     additional_userdata = string
-    additional_security_group_ids = list(string)
     root_volume_type              = string
     asg_max_size                  = string
     asg_desired_capacity          = string
@@ -108,11 +106,14 @@ variable "eks_worker_groups" {
     name                          = "worker-group-medium"
     instance_type                 = "t3.medium"
     additional_userdata           = ""
-    additional_security_group_ids = [aws_security_group.worker_group_mgmt_one.id]
     root_volume_type              = "gp2"
 
     #autoscaling group section
     asg_max_size                  = "3"
     asg_desired_capacity          = "3"
   }]
+}
+
+variable "kubernetes_version" {
+  default = "1.19"
 }
