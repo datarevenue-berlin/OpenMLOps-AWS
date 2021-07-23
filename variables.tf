@@ -103,7 +103,6 @@ variable "eks_worker_groups" {
     asg_max_size                  = string
     asg_desired_capacity          = string
 	}))
-  }
 
   default = [{
     name                          = "worker-group-medium"
