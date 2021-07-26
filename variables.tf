@@ -115,5 +115,6 @@ variable "eks_worker_groups" {
 }
 
 variable "kubernetes_version" {
-  default = "1.19"
+  type = string
+  default = "1.17"
 }
