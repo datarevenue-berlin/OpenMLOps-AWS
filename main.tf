@@ -72,4 +72,6 @@ module "mlops-architecture" {
   aws = true
   enable_registration_page = var.enable_registration_page
   tls_certificate_arn = var.tls_certificate_arn
+
+  access_rules_path = var.access_rules_path
 }
