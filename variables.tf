@@ -112,6 +112,7 @@ variable "kubernetes_version" {
 }
 
 variable "access_rules_path" {
+  description = "Path to your oathkeeper's access rules definitions YAML file."
   type = string
   default = null
 }
