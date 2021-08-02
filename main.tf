@@ -72,7 +72,6 @@ module "mlops-architecture" {
   aws = true
   enable_registration_page = var.enable_registration_page
   tls_certificate_arn = var.tls_certificate_arn
-  ory_keto_db_password = var.ory_keto_db_password
 
-  install_ory_keto = var.install_ory_keto
+  access_rules_path = var.access_rules_path
 }
