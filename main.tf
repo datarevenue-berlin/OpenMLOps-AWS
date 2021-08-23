@@ -71,6 +71,10 @@ module "mlops-architecture" {
 
   aws = true
   enable_registration_page = var.enable_registration_page
+  enable_password_recovery = var.enable_password_recovery
+  enable_verification = var.enable_verification
+  smtp_connection_uri = var.smtp_connection_uri
+  smtp_from_address = var.smtp_from_address
   tls_certificate_arn = var.tls_certificate_arn
 
   access_rules_path = var.access_rules_path
