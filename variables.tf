@@ -84,6 +84,30 @@ variable "enable_registration_page" {
   default = true
 }
 
+variable "smtp_connection_uri" {
+  description = "SMTP Connection for Ory"
+  type = string
+  default = "smtp://omigamibot%40gmail.com:omigamidevbot2021@smtp.gmail.com:587"
+}
+
+variable "smtp_from_address" {
+  description = "Email address for outgoing mails from Ory"
+  type = string
+  default = "omigamibot@gmail.com"
+}
+
+variable "enable_password_recovery" {
+  description = "Bool to set to enable password recovery using emails"
+  type = bool
+  default = false
+}
+
+variable "enable_verification" {
+  description = "Bool to set to enable account registration confirmation using emails"
+  type = bool
+  default = false
+}
+
 variable "eks_worker_groups" {
   description = "Definition of AWS worker groups to be utilized."
   type = list(object({
