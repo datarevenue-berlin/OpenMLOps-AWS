@@ -121,13 +121,13 @@ variable "eks_worker_groups" {
 
   default = [{
     name                          = "worker-group-medium"
-    instance_type                 = "t3.medium"
+    instance_type                 = "t3a.medium"
     additional_userdata           = ""
     root_volume_type              = "gp2"
 
     #autoscaling group section
-    asg_max_size                  = "3"
-    asg_desired_capacity          = "3"
+    asg_max_size                  = "4"
+    asg_desired_capacity          = "2"
   }]
 }
 

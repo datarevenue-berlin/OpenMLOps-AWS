@@ -32,3 +32,5 @@ oauth2_providers = [
 ]
 
 enable_registration_page = true
+enable_password_recovery = false
+enable_verification = false
