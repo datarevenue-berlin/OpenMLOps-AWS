@@ -75,6 +75,10 @@ variable "install_feast" {
   type = bool
 }
 
+variable "install_jupyterhub" {
+  type = bool
+}
+
 variable "tls_certificate_arn" {
 }
 

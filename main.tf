@@ -68,6 +68,7 @@ module "mlops-architecture" {
   ory_kratos_db_password = var.ory_kratos_db_password
 
   install_feast = var.install_feast
+  install_jupyterhub = var.install_jupyterhub
 
   aws = true
   enable_registration_page = var.enable_registration_page
