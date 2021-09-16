@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0
+
+### Breaking changes
+- Remove dependency on the OpenMLOPs-EKS-cluster repo
+- Use OpenMLOPs-AWS to deploy only AWS infrastructure
+
 ## 0.2.0
 
 ### Features
