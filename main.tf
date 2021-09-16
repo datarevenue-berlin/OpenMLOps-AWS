@@ -79,4 +79,6 @@ module "mlops-architecture" {
   tls_certificate_arn = var.tls_certificate_arn
 
   access_rules_path = var.access_rules_path
+  ambassador_chart_values_path = var.ambassador_chart_values_path
+  kratos_chart_values_path = var.kratos_chart_values_path
 }
