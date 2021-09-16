@@ -20,3 +20,7 @@ output "cluster_auth_token" {
   value = module.mlops-architecture-eks.cluster_auth_token
   sensitive = true
 }
+
+output "bucket_mlflow" {
+  value = aws_s3_bucket.mlflow_artifact_root.bucket
+}
