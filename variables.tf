@@ -69,5 +69,5 @@ variable "eks_worker_groups_az_b" {
 
 variable "kubernetes_version" {
   type = string
-  default = "1.17"
+  default = "1.18"
 }
